@@ -5,16 +5,19 @@
             <h1><a href="/">Waterbird list</a></h1>
         </header>
 
-        <article>
-            
-            <h2><a href="">Flamingo</a></h2>
-            <p>Flamingos are salt water birds that frequent Florida's saltwater areas.                                                       </p>
-        </article>
+        {% for waterbird in waterbirds %}
+            <article>
+                <h2><a href="">{{ waterbird.name }}</a></h2>
+                <p>{{ waterbird.description|linebreaksbr }}</p>
+                <!--<p>Flamingos are salt water birds that frequent Florida's saltwater areas.   -->                                                    </p>
+            </article>
 
+        {% endfor %}
+<!--
         <article>
             
             <h2><a href="">Crane</a></h2>
             <p>Cranes are beautiful birds frequenting fresh water swamps.</p>
-        </article>
+        </article> -->
     </body>
 </html>
