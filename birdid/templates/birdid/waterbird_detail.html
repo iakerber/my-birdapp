@@ -1,0 +1,9 @@
+{% extends 'birdid/base.html' %}
+
+{% block content %}
+    <article class="waterbird">
+        
+        <h2>{{ waterbird.name }}</h2>
+        <p>{{ waterbird.description|linebreaksbr }}</p>
+    </article>
+{% endblock %}
