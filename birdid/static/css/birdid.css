@@ -58,3 +58,21 @@ body {
 .waterbird h2 a:visited {
     color: #362e2e;
 }
+
+.waterbird-form textarea,
+.waterbird-form input {
+    width: 100%;
+}
+
+.waterbird {
+    margin-bottom: 70px;
+}
+
+.waterbird h2 a,
+.waterbird h2 a:visited {
+    color: #000000;
+}
+
+.waterbird > .actions {
+    float: right;
+}
