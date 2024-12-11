@@ -13,6 +13,7 @@ class Waterbird(models.Model):
     call_complexity = models.CharField(max_length = 100)
     water_type = models.CharField(max_length = 100)
     description = models.TextField()
+    image_bird = models.ImageField(default='fallback.png', blank=True)
 
 def __str__(self):
     return self.name

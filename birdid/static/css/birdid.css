@@ -76,3 +76,8 @@ body {
 .waterbird > .actions {
     float: right;
 }
+
+.image_bird {
+    display: block;
+    width: 100%;
+}

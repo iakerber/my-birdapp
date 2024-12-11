@@ -3,6 +3,13 @@
 {% block content %}
     <article class="waterbird">
         
+        <img 
+            class="image_bird"
+            src="{{ waterbird.image_bird.url }}"
+            alt="{{ waterbird.name }}"
+            
+        />
+
         <h2>{{ waterbird.name }}</h2>
         <p>{{ waterbird.description|linebreaksbr }}</p>
         <aside class="actions">
