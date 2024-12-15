@@ -1,0 +1,23 @@
+{% extends 'birdid/raptor_base.html' %}
+
+{% block content %}
+    <article class="waterbird">
+        
+        <img 
+            class="image_bird"
+            src="{{ raptor.image_bird.url }}"
+            alt="{{ raptor.name }}"
+            
+        />
+
+        <h2>{{ raptor.name }}</h2>
+        <p>{{ raptor.description|linebreaksbr }}</p>
+        <aside class="actions">
+            {% if user.is_authenticated %}
+                <a class="btn btn-secondary" href="{% url 'raptor_edit' pk=raptor.pk %}">
+                    {% include './icons/pencil-square.svg' %}
+                </a>
+            {% endif %}
+        </aside>
+    </article>
+{% endblock %}

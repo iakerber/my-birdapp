@@ -1,0 +1,9 @@
+{% extends 'birdid/songbird_base.html' %}
+
+{% block content %}
+    <h2>New songbird entry</h2>
+    <form method="POST" class="songbird-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-secondary">Save</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'birdid/raptor_base.html' %}
+                
+{% block content %}
+    {% for raptor in raptors %}
+        <article class="waterbird">
+            <h2><a href="{% url 'raptor_detail' pk=raptor.pk %}">{{ raptor.name }}</a></h2>
+            <p>{{ raptor.description|linebreaksbr }}</p>
+            
+        </article>
+
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'birdid/mainpage_base.html' %}
+                
+{% block content %}
+    
+        <article class="waterbird">
+            <ul>
+                <li><h2><a href="{% url 'waterbird_list' %}">WATERBIRD LIST</a></h2></li>
+                <li><h2><a href="{% url 'raptor_list' %}">RAPTOR LIST</a></h2></li>
+                <li><h2><a href="{% url 'songbird_list' %}">SONGBIRD LIST</a></h2></li>
+            </ul>
+            
+        </article>
+
+    
+{% endblock %}

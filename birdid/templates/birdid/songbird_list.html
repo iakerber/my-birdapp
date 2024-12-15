@@ -1,0 +1,12 @@
+{% extends 'birdid/songbird_base.html' %}
+                
+{% block content %}
+    {% for songbird in songbirds %}
+        <article class="waterbird">
+            <h2><a href="{% url 'songbird_detail' pk=songbird.pk %}">{{ songbird.name }}</a></h2>
+            <p>{{ songbird.description|linebreaksbr }}</p>
+            
+        </article>
+
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'birdid/raptor_base.html' %}
+
+{% block content %}
+    <h2>New raptor entry</h2>
+    <form method="POST" class="raptor-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-secondary">Save</button>
+    </form>
+{% endblock %}

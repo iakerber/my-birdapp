@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.db import models
-#from django.utils import timezone
+
 
 # Create your models here.
 
@@ -14,6 +14,23 @@ class Waterbird(models.Model):
     water_type = models.CharField(max_length = 100)
     description = models.TextField()
     image_bird = models.ImageField(default='fallback.png', blank=True)
+
+def __str__(self):
+    return self.name
+
+class Raptor(models.Model):
+    name = models.CharField(max_length = 100)
+    description = models.TextField()
+    image_bird = models.ImageField(upload_to='images/', default='coopers_hawk.jpg', blank=True, null=True)
+
+def __str__(self):
+    return self.name
+
+
+class Songbird(models.Model):
+    name = models.CharField(max_length = 100)
+    description = models.TextField()
+    image_bird = models.ImageField(upload_to='images/', default='fallback.png', blank=True, null=True)
 
 def __str__(self):
     return self.name
